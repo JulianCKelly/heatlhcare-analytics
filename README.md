@@ -43,18 +43,27 @@ This project leverages a Kaggle healthcare dataset to analyze patient health met
 
 ## **Tools and Technologies**  
 - **Languages**: Python  
-- **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn  
-- **Database**: SQLite  
-- **Notebook**: Jupyter Notebook  
+- **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Imblearn  
+- **Notebook**: Google Colab Notebook  
 
 ---
 
 ## **Results**  
-- Achieved a **recall score of 65.00**, reducing the risk of undetected diabetes cases.   I plan too address this by adjusting the model threshold, undersampling the majority
-  cases and adding a 'balanced' class weight.
+Initial Model Performance
 
-- Identified key health metrics strongly correlated with diabetes risk.  
+The initial model was a RandomForestClassifier trained with class weighting (class_weight='balanced'). The recall score was 0.65, indicating the model correctly identified 65% of positive cases (diabetes). This was a decent starting point but left room for improvement to reduce false negatives further.
 
+Threshold Adjustment
+
+By lowering the decision threshold from the default (0.5) to 0.3, the model prioritized sensitivity to detect more positive cases. This adjustment improved the recall score to 0.87, ensuring more positive cases were identified. However, this came at the cost of reduced precision, as more false positives were introduced.
+
+SMOTE (Synthetic Minority Oversampling Technique)
+
+To address class imbalance, SMOTE was applied to oversample the minority class (positive cases). After retraining the model, the recall score improved to 0.78, while maintaining a better balance between precision and recall. This method showed significant improvement without drastically sacrificing precision.
+
+Grid Search for Hyperparameter Tuning
+
+To optimize the model further, hyperparameter tuning was conducted using GridSearchCV. This step fine-tuned parameters like n_estimators, max_depth, and min_samples_split. Post-tuning, the recall score remained 0.78, indicating stability, but the f1-score improved slightly, showing better overall performance.
 ---
 
  
