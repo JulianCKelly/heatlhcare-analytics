@@ -1,5 +1,9 @@
+<img width="746" alt="Screenshot 2024-12-02 at 9 17 12 PM" src="https://github.com/user-attachments/assets/b523101b-b7a6-4c55-9d6f-72b112da822a">
+
+
+
 # **Healthcare Analytics Project**  
-*Using Machine Learning to Predict Diabetes Risk*
+*Using Machine Learning to Predict Diabetes Risk* 
 
 ---
 
