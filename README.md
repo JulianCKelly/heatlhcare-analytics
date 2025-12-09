@@ -67,8 +67,8 @@ SMOTE (Synthetic Minority Oversampling Technique)
 To address class imbalance, SMOTE was applied to oversample the minority class (positive cases). After retraining the model, the recall score improved to 0.78, while maintaining a better balance between precision and recall. This method showed significant improvement without drastically sacrificing precision.
 
 Grid Search for Hyperparameter Tuning
+To optimize the model further, hyperparameter tuning was conducted using GridSearchCV. This step fine-tuned parameters like n_estimators, maz_depth, and min_smaple_split. Post-tuning, the recall score remained 0.78, indicating stability, but the f1-score improved slightly, showing better overall performance.
 
-To optimize the model further, hyperparameter tuning was conducted using GridSearchCV. This step fine-tuned parameters like n_estimators, max_depth, and min_samples_split. Post-tuning, the recall score remained 0.78, indicating stability, but the f1-score improved slightly, showing better overall performance.
 ---
 
  
